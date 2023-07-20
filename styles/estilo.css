@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+body {
+	background-color: #ffffff;
+	color:black;
+	font: 14px 'Helvetica Neue', Arial, Helvetica;
+}
+
+header#cabecalho {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  background-color:#ffffff;
+}
+
+header#cabecalho h1{
+	color: rgba(0,0,0,.8);
+	
+}
+
+
+div#artigos h3{
+	font-size:30px;
+	margin:0;
+	text-align:center;
+	
+		
+}
+div#artigos p{
+	text-indent:20px;
+	font-size: 25px;
+	
+}
+
+header#cabecalho h1 {
+	padding:0px;
+	text-align:center;
+	font-size:25px;
+	margin-bottom:0px;
+}
+
+nav#menu{
+	border-bottom:5px solid #ffffff;
+	display:block;
+}
+nav#menu ul {
+	list-style:none;
+	text-transform:uppercase;
+    text-align:center;	
+}
+nav#menu li {
+	display: inline-block;
+	background-color: #199ed0;
+	padding:15px;
+	margin:0px;
+    margin-bottom:-15px;
+	font-size:20px;
+}
+
+nav#menu li:hover{
+	    background-color:#ffffff ;
+	    color:#199ed0;
+	    transition: 2s;
+            font-size:20px;
+}
+
+nav#menu a{
+	 color:#ffffff;
+	 text-decoration: none;
+}
+nav#menu a:hover {
+	color:#199ed0;
+
+}
+div#parte_2{
+	background-color:#199ed0;
+	position:relative;
+}
+
+div#fundo-1 {
+	display:block;
+	position:relative;
+	background-color:#ffffff;
+	padding: 30px;
+	
+}
+div#fundo-1 div#parte_3{
+   width:800px;
+   position:relative;
+   margin: 0 auto 0 auto;
+}
+div#parte_3 div#parte_3_direita {
+	position:relative;
+	display:block;
+	float:right;
+	width:400px;
+	
+}
+div#parte_3 div#parte_3_esquerda{
+	display:block;
+    width:400px;	
+}
+
+div#fundo-3{
+	display:block;
+	background-color:#199ed0;
+	padding: 30px;
+	
+}
+div#fundo-3 div#parte_4{
+   width:800px;
+   position:relative;
+   margin: 0 auto 0 auto;
+   color: #ffffff;
+}
+div#parte_4 div#parte_4_direita {
+	position:relative;
+	display:block;
+	float:right;
+	width:400px;
+	margin-top: -450px; 	/* Não sei como modificar para a part 4 ter a mesa estrutura/posição que a part 3 */
+	
+}
+div#parte_4 div#parte_4_esquerda{
+	display:block;
+    width:400px;	
+}
+
+div#fundo-4{
+	display:block;
+	background-color:#ffffff;
+	padding: 30px;
+	
+}
+div#fundo-4 div#parte_5{
+   width:800px;
+   position:relative;
+   margin: 0 auto 0 auto;
+   color: black;
+}div#parte_5 div#parte_5_direita {
+	position:relative;
+	display:block;
+	float:right;
+	width:400px;
+	margin-top: -300px; 	/* Não sei como modificar para a part 4 ter a mesa estrutura/posição que a part 3 */
+	
+}
+div#parte_5 div#parte_5_esquerda{
+	display:block;
+    width:400px;	
+}
+
+
+div#fundo-5{
+	display:block;
+	background-color:#199ed0;
+	padding: 30px;
+	
+}
+div#fundo-5 div#parte_6{
+   width:800px;
+   position:relative;
+   margin: 0 auto 0px auto;
+   color: #ffffff;
+}div#parte_6 div#parte_6_direita {
+	position:relative;
+	display:block;
+	float:right;
+	width:400px;
+	margin-top: -300px; 	/* Não sei como modificar para a part 4 ter a mesa estrutura/posição que a part 3 */
+	
+}
+div#parte_6 div#parte_6_esquerda{
+	display:block;
+    width:400px;	
+}
+
+
+
+footer#rodape{
+	font-family:inherit ;
+	clear:both;
+	margin: 10px auto 0 auto;
+	background-color: #d9d9d9;
+	padding: 10px;
+	text-transform:uppercase;
+}
+
+footer#rodape p{
+	margin-top:0px;
+	text-align:center;
+	color:rgba(0,0,0,.8);
+	font-weight:bold;
+	font-size:15px;
+}
+footer#rodape a {
+	color:rgba(0,0,0,.8);
+	text-align:center;
+}
+footer#rodape a:hover {
+	text-decoration:underline;
+}

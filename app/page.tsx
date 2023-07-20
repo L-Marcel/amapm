@@ -1,94 +1,65 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <div id="artigos">
+        <div id="fundo-1">
+          <div id="parte_3">
+            <div id="parte_3_direita">
+              <hgroup id="quadrado_1">
+                <h3>Nova página da AMAPM</h3>	
+                <p>Seja bem-vindo(a) ao site da Associação cristã de Moradores e Amigos da Praia do meio!  </p>
+                <p>Nele você saberá quem somos nós, qual o nosso objetivo, conhecerá a nossa história e saberá notícias da região de forma mais aprofundada.</p>
+              </hgroup>
+            </div>
+            <div id="parte_3_esquerda">
+              <img src="assets/praia-do-meio.png"/>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div id="fundo-3">
+          <div id="parte_4">
+            <div id="parte_4_esquerda">
+              <img src="assets/oracao.png"/>
+            </div>
+          
+            <div id="parte_4_direita">
+              <hgroup id="quadrado_2">
+                <h3>Diversidade</h3>
+                <p>Temos por objetivo praticar as lições evangélicas de Jesus Cristo sem quaisquer distinção religiosa, política ou social.</p>
+                <p>Mesmo tendo como base as lições de Jesus cristo, não possuímos vinculoco com nenhuma entidade religiosa e ,além disso, nossos voluntários são das mais diversas religiões ou partidos políticos.</p>
+              </hgroup>
+            </div>    
+          </div>
+        </div>
+        <div id="fundo-4">
+          <div id="parte_5">
+            <div id="parte_5_esquerda">
+              <img src="assets/logo-da-amapm-2.png"/>
+            </div>
+            <div id="parte_5_direita">
+              <hgroup id="quadrado_2">
+                <h3>Quem somos nós? </h3>
+                <p>A Associação Cristã de Moradores e Amigo da Praia do meio( AMA Praia do Meio ) é uma associação sem fins lucrativos composta por voluntários das mais diversas áreas.</p>
+              </hgroup>
+            </div>    
+          </div>
+        </div>
+        <div id="fundo-5">
+          <div id="parte_6">
+            <div id="parte_6_esquerda">
+              <img src="assets/oracao.png"/>
+            </div>
+            <div id="parte_6_direita">
+              <hgroup id="quadrado_2">
+                <h3>Diversidade</h3>
+                <p>Não possuímos nenhum vínculo político seja ele de esquerda, de direita ou centro, porém, caso algum político queira participar como sócio, não será impedido.</p>
+              </hgroup>
+            </div>    
+          </div>
+        </div>
       </div>
     </main>
   )
