@@ -2,9 +2,20 @@ import './globals.css'
 import '../styles/old_css.css'
 import type { Metadata } from 'next'
 import Link from 'next/link';
-//import { Inter } from 'next/font/google'
+import { Montserrat, Roboto } from 'next/font/google'
+import { Header } from '@/components/Header';
 
-//const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ 
+  subsets: ['latin'],
+  weight: ["400", "500", "600", "700"],
+  variable: "--title"
+});
+
+const roboto = Roboto({ 
+  subsets: ['latin'],
+  weight: ["400", "500", "700"],
+  variable: "--body"
+});
 
 export const metadata: Metadata = {
   title: 'AMAPM - Associação Cristã de Moradores e Amigos da Praia do Meio',
@@ -18,25 +29,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header id="cabecalho">
-          <figure id="logo">
-            <img src="assets/logo-da-amapm.jpg"/>
-          </figure>
-          <h1>AMAPM - Associação Cristã de Moradores e Amigos da Praia do Meio</h1>
-          <div id="artigos">
-            <div id="parte_2"> 	
-            <nav id="menu">
-              <ul itemType="disc">
-                <li><Link href="/">Página Principal</Link></li>
-                <li><Link href="/noticias">Notícias</Link></li>
-                <li><Link href="/diretoria">Diretoria</Link></li>
-                <li><Link href="/formulario">Formulários</Link></li>
-              </ul>
-            </nav>
-            </div>
-          </div>
-        </header>	
+      <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      </head>
+      <body className={`${montserrat.variable} ${roboto.variable}`}>
+        <Header>
+          <Header.Link href="/">Início</Header.Link>
+          <Header.Link href="/noticias">Notícias</Header.Link>
+          <Header.Link href="/diretoria">Diretoria</Header.Link>
+          <Header.Link href="/formulario">Formulários</Header.Link>
+        </Header>
         {children}
         <footer id="rodape">
           <br></br>
