@@ -14,8 +14,8 @@ function HeaderRoot({ children }: HeaderRootProps) {
       <figure>
         <Image 
           alt="" 
-          width={200} 
-          height={200} 
+          width={175} 
+          height={175} 
           src="/assets/logo.png"
         />
       </figure>
