@@ -19,7 +19,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'AMAPM - Associação Cristã de Moradores e Amigos da Praia do Meio',
-  description: '',
+  description: 'Associação Cristã de Moradores e Amigos da Praia do Meio',
 }
 
 export default function RootLayout({
