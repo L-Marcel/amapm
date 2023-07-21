@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  section {
+    display: flex;
+    padding: 2rem 0;
+  }
+}
+
+.hero_image {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin-left: -64px;
+
+  img {
+    position: absolute;
+    border-radius: 64px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 64px;
+    display: inline-block;
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.70) 100%), transparent 50% / cover no-repeat;
+  }
+
+  &::before {
+    position: absolute;
+    height: 380px;
+    width: 80px;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    margin: 10px 0px;
+    margin-left: 345px;
+    background-color: var(--dark-blue);
+    border-radius: 32px;
+  }
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  background-color: var(--blue);
+  margin: 27px 0;
+  padding: 3rem 6rem;
+  width: calc(100% - 400px + 64px);
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 146px;
+    height: 133px;
+    left: 0;
+    margin: 0 calc(325px - 64px);
+    margin-top: 106px;
+    background-image: url("/assets/oracao.png");
+    background-size: cover;
+  }
+
+  p {
+    color: var(--dark);
+    font-family: var(--body);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
