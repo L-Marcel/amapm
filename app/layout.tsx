@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link';
 import { Montserrat, Roboto } from 'next/font/google'
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -19,7 +20,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'AMAPM - Associação Cristã de Moradores e Amigos da Praia do Meio',
-  description: 'Associação Cristã de Moradores e Amigos da Praia do Meio',
+  description: 'Somos uma associação sem fins lucrativos composta por voluntários das mais diversas áreas. Temos por objetivo praticar as lições evangélicas de Jesus Cristo sem quaisquer distinção religiosa, política ou social.',
 }
 
 export default function RootLayout({
@@ -41,14 +42,7 @@ export default function RootLayout({
           <Header.Link href="/formulario">Formulários</Header.Link>
         </Header>
         {children}
-        <footer id="rodape">
-          <br></br>
-          <p>Sede Provisória</p>
-          <p>Centro de Ciências da Saúde – Departamento de Medicina Clínica</p> 
-            <p>Avenida General Gustavo Cordeiro de Farias, s/n – Petrópolis – CEP: 59012-300</p>
-            <p>Natal/RN – Brasil 🕿 (84) 3342-9706 – Celular: (84) 99193-6207</p> 
-          <p><a href="https://www.instagram.com/amapraiadomeio/" target="_blank">Instagram</a> | <a href="https://m.facebook.com/AmaPmFocodeLuz/">Facebook</a></p>     
-        </footer>
+        <Footer/>
       </body>
     </html>
   )

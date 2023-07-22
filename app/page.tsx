@@ -18,6 +18,15 @@ export default function Home() {
           <p>Nele você saberá quem somos nós, qual o nosso objetivo, conhecerá a nossa história e saberá notícias da região de forma mais aprofundada.</p>
         </div>
       </section>
+      <section>
+        <h2>Quem somos nós?</h2>
+        <p>Somos uma associação sem fins lucrativos composta por voluntários das mais diversas áreas. Temos por objetivo praticar as lições evangélicas de Jesus Cristo sem quaisquer distinção religiosa, política ou social.</p>
+      </section>
+      <section>
+        <h2>Diferentes? Não, diversos!</h2>
+        <p>Temos como base as lições de Jesus Cristo, mas não possuímos vinculoco com nenhuma entidade religiosa. Além disso, nossos voluntários são das mais diversas religiões ou partidos políticos.</p>
+        <p>Logo, não possuímos nenhum vínculo político seja ele de esquerda, de direita ou centro. No entanto, caso algum político queira participar como sócio, não será impedido.</p>
+      </section>
     </main>
   )
 }

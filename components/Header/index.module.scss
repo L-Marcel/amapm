@@ -14,7 +14,7 @@
       max-width: 60vw;
       font-family: var(--title);
       color: var(--dark);
-      font-size: 2rem;
+      font-size: clamp(1.8rem, 32px, 2.6rem);
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -32,7 +32,7 @@
 
       li {
         font-family: var(--title);
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 22.4px, 1.8rem);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
