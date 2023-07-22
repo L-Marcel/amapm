@@ -23,7 +23,7 @@ export default function News() {
 
         <p>Apresentação do Rocas Divulgações</p>
         <p>• Charles e Oliver fizeram uma apresentação sobre o trabalho realizado pela Rocas
-        Divulgações, por meio do Instagram "Rocas Divulgações", que tem como objetivo
+        Divulgações, por meio do Instagram {'"'}Rocas Divulgações{'"'}, que tem como objetivo
         dar voz às comunidades, inicialmente focando nas Rocas, mas com a
         possibilidade de expansão para outros bairros. Eles demonstraram disposição em
         colaborar com a associação no que fosse possível.</p>
