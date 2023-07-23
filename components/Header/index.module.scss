@@ -206,7 +206,7 @@
         padding: 0rem 2.5rem;
 
         h1 {
-          font-size: var(--md);
+          font-size: var(--sm);
           z-index: 2;
         }  
       }
@@ -214,13 +214,17 @@
       img {
         position: absolute;
         left: -32px;
-        top: 18px;
+        top: 8px;
         z-index: 1;
         opacity: .3;
       }
 
       ul {
         z-index: 2;
+
+        li {
+          font-size: var(--xs);
+        }
       }
     }
   }
