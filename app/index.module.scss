@@ -16,7 +16,7 @@
       h2 {
         color: var(--black);
         font-family: var(--title);
-        font-size: clamp(1.6rem, 2vw, 2rem);
+        font-size: var(--xl);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -25,7 +25,7 @@
       p {
         color: var(--black);
         font-family: var(--body);
-        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        font-size: var(--lg);
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -33,13 +33,13 @@
     }
 
     &:last-of-type {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
   }
 }
 
 .hero_image {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 400px;
   height: 400px;
@@ -85,8 +85,10 @@
   align-items: flex-start;
   background-color: var(--light-blue);
   margin: 27px 0;
+  margin-bottom: 0;
   padding: 3rem 6rem;
-  width: calc(100% - 400px + 64px);
+  min-height: calc(400px - 54px);
+  padding-left: calc(6rem + 400px - 64px);
 
   &::after {
     position: absolute;
@@ -95,7 +97,7 @@
     height: 133px;
     left: 0;
     margin: 0 calc(325px - 64px);
-    margin-top: 106px;
+    margin-top: 36px;
     background-image: url("/assets/oracao.png");
     background-size: cover;
   }
@@ -103,7 +105,7 @@
   p {
     color: var(--black);
     font-family: var(--body);
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-size: var(--xl);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -118,6 +120,18 @@
 
     section:not(:first-of-type) {
       padding: 1.5rem 2.5rem;
+      
+      p {
+        font-size: var(--md);
+      }
+
+      h2 {
+        font-size: var(--lg);
+      }
+
+      &:last-of-type {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -154,6 +168,35 @@
 
     p {
       z-index: 20;
+      font-size: var(--lg);
+    }
+  }
+}
+
+@media (min-width: 1540px) {
+  .container {
+    section:not(:first-of-type) {
+      p {
+        font-size: var(--xl);
+      }
+
+      h2 {
+        font-size: var(--3xl);
+      }
+    }
+  }
+
+  .hero_content {
+    p {
+      font-size: var(--2xl);
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .hero_content {
+    p {
+      font-size: var(--3xl);
     }
   }
 }

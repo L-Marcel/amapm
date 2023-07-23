@@ -3,13 +3,13 @@
   padding: 2rem 5rem;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 
   p, address {
     color: var(--black);
     font-family: var(--body);
     text-transform: uppercase;
-    font-size: clamp(1.2rem, 1.6vw, 1.625rem);
+    font-size: var(--xs);
     font-weight: 400;
     line-height: normal;
   }
@@ -28,5 +28,14 @@
 @media (max-width: 950px) {
   .container {
     padding: 2rem 2.5rem;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1540px) {
+  .container {
+    p, address {
+      font-size: var(--md);
+    }
   }
 }

@@ -16,10 +16,10 @@
       gap: 1.6rem;
   
       h1 {
-        max-width: 60vw;
+        max-width: 65vw;
         font-family: var(--title);
         color: var(--black);
-        font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+        font-size: var(--xl);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -37,7 +37,7 @@
   
         li {
           font-family: var(--title);
-          font-size: clamp(1.2rem, 2vw, 1.8rem);
+          font-size: var(--sm);
           font-style: normal;
           font-weight: 600;
           line-height: normal;
@@ -107,7 +107,7 @@
         h1 {
           font-family: var(--title);
           color: var(--black);
-          font-size: clamp(1.6rem, 2vw, 2rem);
+          font-size: var(--lg);
           font-style: normal;
           font-weight: 600;
           line-height: normal;
@@ -148,7 +148,7 @@
               
           li {
             font-family: var(--title);
-            font-size: clamp(1rem, 1.8vw, 1.6rem);
+            font-size: var(--sm);
             font-style: normal;
             font-weight: 600;
             line-height: normal;
@@ -206,12 +206,59 @@
         padding: 0rem 2.5rem;
 
         h1 {
-          font-size: clamp(1.4rem, 2.5vw, 2rem);
+          font-size: var(--md);
+          z-index: 2;
         }  
       }
 
       img {
-        display: none;
+        position: absolute;
+        left: -32px;
+        top: 18px;
+        z-index: 1;
+        opacity: .3;
+      }
+
+      ul {
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@media (min-width: 1540px) {
+  .container {
+    > div:first-of-type {
+      nav {
+        h1 {
+          max-width: 80vw;
+          font-size: var(--2xl);
+        }
+
+        ul {
+          li {
+            font-size: var(--lg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .container {
+    > div:first-of-type {
+      nav {
+        h1 {
+          max-width: 80vw;
+          font-size: var(--3xl);
+        }
+
+        ul {
+          li {
+            font-size: var(--xl);
+          }
+        }
       }
     }
   }
