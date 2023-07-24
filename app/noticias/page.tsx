@@ -5,11 +5,11 @@ export default function News() {
   return (
     <main className={style.container}>
       <section>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        <Post content={{}}/>
+        <Post content={{}}/>
+        <Post content={{}}/>
+        <Post content={{}}/>
+        <Post content={{}}/>
       </section>
     </main>
   );

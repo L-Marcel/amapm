@@ -20,7 +20,6 @@
         font-family: var(--title);
         color: var(--black);
         font-size: var(--xl);
-        font-style: normal;
         font-weight: 600;
         line-height: normal;
       }
@@ -38,7 +37,6 @@
         li {
           font-family: var(--title);
           font-size: var(--sm);
-          font-style: normal;
           font-weight: 600;
           line-height: normal;
   
@@ -108,7 +106,6 @@
           font-family: var(--title);
           color: var(--black);
           font-size: var(--lg);
-          font-style: normal;
           font-weight: 600;
           line-height: normal;
         }  
@@ -117,11 +114,12 @@
       nav {
         display: flex;
         flex-direction: column;
+        width: 100%;
         gap: 1.6rem;
         padding: 0;
 
         ul {
-          width: 100vw;
+          width: 100%;
           overflow: auto;
           border-radius: 0;
           display: flex;
@@ -149,7 +147,6 @@
           li {
             font-family: var(--title);
             font-size: var(--sm);
-            font-style: normal;
             font-weight: 600;
             line-height: normal;
     

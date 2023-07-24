@@ -1,9 +1,19 @@
-export function Post() {
+import style from "./index.module.scss";
+
+export type PostContent = {};
+
+interface PostProps {
+  content: PostContent;
+};
+
+export function Post({ content }: PostProps) {
   return (
-    <article>
+    <article className={style.container}>
       <header>
-        <h3>Ata da reunião do mês de maio</h3>
-        <p><time>30/05/2023</time> — Por Ana Paula</p>
+        <h3>
+          Ata da reunião do mês de maio
+        </h3>
+        <p>30/05/2023 — Por Ana Paula</p>
       </header>
       <main>
         <ul>
