@@ -22,23 +22,26 @@ export function Post({ content }: PostProps) {
       <main>
         <Markdown 
           className={style.markdown}
-          children={content.body}
           remarkPlugins={[remarkGfm]}
           components={{
             "h1": "h4",
             "h2": "h5",
             "h3": "h6",
-            table: ({ ...rest }) => {
+            table: ({ children, ...rest }) => {
               return (
                 <div role="box">
                   <div role="table">
-                    <table {...rest}/>
+                    <table {...rest}>
+                      {children}
+                    </table>
                   </div>
                 </div>
               );
             }
           }}
-        />
+        >
+          {content.body}
+        </Markdown>
       </main>
       <footer>
         <a href="#" role="blue">Exemplo de butão azul</a>
