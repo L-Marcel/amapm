@@ -1,6 +1,10 @@
 import style from "./index.module.scss";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-export type PostContent = {};
+export type PostContent = {
+  body: string;
+};
 
 interface PostProps {
   content: PostContent;
@@ -16,17 +20,29 @@ export function Post({ content }: PostProps) {
         <p>30/05/2023 — Por Ana Paula</p>
       </header>
       <main>
-        <ul>
-          <li><p>Data: 30 de maio de 2023</p></li>
-          <li><p>Horário: 19:30 - 21:30</p></li>
-          <li><p>Local: Centro Social Nossa Senhora de Fátima na Praia do Meio</p></li>
-        </ul>
-        <p>
-          Tivemos um total de 22 membros presentes na reunião. Foi realizada a presentação do Rocas Divulgações, debatido a questão do novo Hospital Municipal de Natal, a audiência sobre o terreno abandonado da Petrobrás, a contribuição da associação para o Plano Plurianual Federal entre outras pautas importantes.
-        </p>
+        <Markdown 
+          className={style.markdown}
+          children={content.body}
+          remarkPlugins={[remarkGfm]}
+          components={{
+            "h1": "h4",
+            "h2": "h5",
+            "h3": "h6",
+            table: ({ ...rest }) => {
+              return (
+                <div role="box">
+                  <div role="table">
+                    <table {...rest}/>
+                  </div>
+                </div>
+              );
+            }
+          }}
+        />
       </main>
       <footer>
-        <button>Abrir publicação completa</button>
+        <a href="#" role="blue">Exemplo de butão azul</a>
+        <a href="#">Abrir publicação completa</a>
       </footer>
     </article>
   );

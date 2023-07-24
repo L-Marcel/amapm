@@ -49,3 +49,17 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue);
 }
+
+@media (max-width: 950px) {
+  :root {
+    --3xl: 1.8rem;
+    --2xl: 1.6rem;
+    --xl: 1.4rem;
+    --lg: 1.3rem;
+    --md: 1.25rem;
+    --sm: 1.15rem;
+    --xs: 1rem;
+
+    font-size: 16px;
+  }
+}
