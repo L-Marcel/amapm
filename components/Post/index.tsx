@@ -1,9 +1,22 @@
 import style from "./index.module.scss";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import dayjs from "dayjs";
+
+export type PostButton = {
+  id: string;
+  text: string;
+  theme: "blue" | "gray";
+  link: string;
+};
 
 export type PostContent = {
+  id: string;
+  title: string;
+  publishedAt: string;
+  author: string;
   body: string;
+  buttons: PostButton[];
 };
 
 interface PostProps {
@@ -11,13 +24,16 @@ interface PostProps {
 };
 
 export function Post({ content }: PostProps) {
+  const { author, id, body, buttons, publishedAt, title } = content;
+  const formattedPublishedAt = dayjs(publishedAt).format("DD/MM/YYYY");
+
   return (
-    <article className={style.container}>
+    <article id={id} className={style.container}>
       <header>
         <h3>
-          Ata da reunião do mês de maio
+          {title}
         </h3>
-        <p>30/05/2023 — Por Ana Paula</p>
+        <p>{formattedPublishedAt} — Por {author}</p>
       </header>
       <main>
         <Markdown 
@@ -40,12 +56,24 @@ export function Post({ content }: PostProps) {
             }
           }}
         >
-          {content.body}
+          {body}
         </Markdown>
       </main>
       <footer>
-        <a href="#" role="blue">Exemplo de butão azul</a>
-        <a href="#">Abrir publicação completa</a>
+        {
+          buttons.map(({ id, link, text, theme }) => {
+            return (
+              <a 
+                key={id} 
+                href={link} 
+                role={theme}
+                target="_blank"
+              >
+                {text}
+              </a>
+            );
+          })
+        }
       </footer>
     </article>
   );

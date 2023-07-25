@@ -74,18 +74,21 @@
     font-size: var(--md);
     font-weight: 600;
     font-family: var(--title);
+    margin-top: 8px;
   }
 
   h5 {
     font-size: var(--sm);
     font-weight: 600;
     font-family: var(--title);
+    margin-top: 10px;
   }
 
   h6 {
     font-weight: 600;
     font-family: var(--title);
     font-size: var(--xs);
+    margin-top: 10px;
   }
 
   ul {
@@ -180,8 +183,9 @@
 
 @media (max-width: 950px) {
   .container {
+    border-radius: 0px;
     box-shadow: 2px 2px 5px -3px;
-    margin: 0rem 1.5rem;
+    margin: 0rem;
     background-color: var(--white);
   }
 }
@@ -205,6 +209,7 @@
       }
     }
   }
+
   .markdown {
     p, li, a, h6, table {
       font-size: var(--md);
