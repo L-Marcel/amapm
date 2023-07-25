@@ -4,14 +4,17 @@ import { revalidatePath } from 'next/cache';
 import { verifyWebhookSignature } from "@hygraph/utils";
  
 export async function POST(request: Request) {
-  const headersList = headers();
-  const signature = headersList.get("gcms-signature");
+  const body = await request.json();
+  const signature = request.headers.get('gcms-signature') ?? "";
+  const secret = process.env.WEBHOOK_SECRET ?? "";
 
   const isValid = verifyWebhookSignature({
-    body: request.body,
-    signature: signature ?? "",
-    secret: process.env.WEBHOOK_SECRET ?? "",
+    body,
+    signature,
+    secret
   });
+
+  console.table({ body, signature, secret, isValid });
 
   if(isValid) {
     revalidatePath("/noticias");
