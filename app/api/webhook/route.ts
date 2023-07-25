@@ -14,8 +14,6 @@ export async function POST(request: Request) {
     secret
   });
 
-  console.table({ body, signature, secret, isValid });
-
   if(isValid) {
     revalidatePath("/noticias");
     return NextResponse.json({ revalidated: true, now: Date.now() });
