@@ -1,20 +1,109 @@
+import { MemberAvatar } from "@/components/MemberAvatar";
+import { Generator } from "@/services/generator";
+import style from "./index.module.scss";
+
+export type BoardMember = {
+  id: number;
+  image: string;
+  name: string;
+  office: string;
+};
+
+const id = Generator.generateId;
+const boardMembers: BoardMember[] = [
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Milton",
+    office: "Presidente"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Jacilena",
+    office: "Vice Presidente"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Daniel",
+    office: "1º Secretário"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Beatriz",
+    office: "2º Secretária "
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Paulo",
+    office: "1º Tesoureiro"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Nivaldo",
+    office: "2º Tesoureiro"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Nilton",
+    office: "Presidente do Cons. Fiscal"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Germano",
+    office: "2º Conselheiro do Cons. Fiscal"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Jissier",
+    office: "3º Conselheiro do Cons. Fiscal"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Rosendo",
+    office: "Suplente do Cons. Fiscal"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Régia",
+    office: "Suplente do Cons. Fiscal"
+  },
+  {
+    id: id(),
+    image: `/assets/membro-${id(true)}.png`,
+    name: "Severino",
+    office: "Suplente do Cons. Fiscal"
+  }
+];
+
 export default function Board() {
   return (
-    <main>
-      <ul id="fotos">
-        <li id="foto01"><span>Milton França | Presidente</span></li>
-        <li id="foto02"><span>Jacilena | Vice Presidente</span></li>
-        <li id="foto03"><span>Daniel | 1º secretátio</span></li>
-        <li id="foto04"><span>Beatriz | 2ª Secretária</span></li>
-        <li id="foto05"><span>Paulo | 1º Tesoureiro</span></li>
-        <li id="foto06"><span>Nivaldo | 2º Tesoureiro</span></li>
-        <li id="foto07"><span>Nilton | Presidente do Cons. Fiscal</span></li>
-        <li id="foto08"><span>Germano | 2º conselheiro do Cons. Fiscal</span></li>
-        <li id="foto09"><span>Jissier | 3º Conselheiro do Cons. Fiscal</span></li>
-        <li id="foto10"><span>Rosendo | Suplente do Cons. Fiscal</span></li>
-        <li id="foto11"><span>Régia Sandra | Suplente do Cons. Fiscal</span></li>
-        <li id="foto12"><span>Severino | Suplente do Cons. Fiscal</span></li>
-      </ul>
+    <main className={style.container}>
+      <section>
+        <ul>
+          {
+            boardMembers.map((member) => {
+              const { id, name, office } = member;
+
+              return (
+                <li key={id}>
+                  <MemberAvatar member={member}/>
+                  <p><span>{name}</span> | {office}</p>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </section>
     </main>
   );
 };

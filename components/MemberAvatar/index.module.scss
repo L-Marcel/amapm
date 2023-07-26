@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  overflow: hidden;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  min-width: 106px;
+  border: 3px solid var(--blue);
+  background-color: var(--white);
+
+  img {
+    z-index: 2;
+  }
+
+  p {
+    position: absolute;
+    font-size: var(--maxl);
+    font-family: var(--title);
+    font-weight: 600;
+    color: var(--blue);
+    left: 50px;
+    top: 50px;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    
+  }
+}

@@ -1,0 +1,45 @@
+.container {
+  section {
+    padding: 1.5rem 5rem 3rem 5rem;
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      
+      li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        > p {
+          font-size: var(--md);
+          font-family: var(--title);
+          font-weight: 600;
+
+          span {
+            color: var(--dark-blue);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    section {
+      padding: 1.8rem 2rem 2rem 2rem;
+
+      ul {
+        justify-content: flex-start;
+
+        li {
+          min-width: 45vw;
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+}
