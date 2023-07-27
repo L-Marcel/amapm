@@ -1,7 +1,7 @@
 import { PanelData } from "@/components/Panel";
 import { PostContent } from "@/components/Post";
 
-async function request(query: string) {
+async function request(query: string, tag: string) {
 	const response = await fetch(process.env.ENDPOINT as string, {
 		method: "POST",
 		headers: {
@@ -10,6 +10,9 @@ async function request(query: string) {
       Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
 		},
 		body: JSON.stringify({ query }),
+    next: { 
+      tags: ["hygraph", tag] 
+    } 
 	});
 
   const json = await response.json();
@@ -46,7 +49,7 @@ export class Query {
         }
         title
       }
-    }`);
+    }`, "panels");
 
     return (response.paineisDeContribuicao ?? []) as PanelData[];
   };
@@ -79,7 +82,7 @@ export class Query {
         createdAt
         id
       }
-    }`);
+    }`, "member-panel");
 
     return (response.sejaMembros[0] ?? undefined) as PanelData | undefined;
   };
@@ -112,7 +115,7 @@ export class Query {
           }
         }
       }           
-    }`);
+    }`, "news");
 
     return (response.noticias ?? []) as PostContent[];
   };

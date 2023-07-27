@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { headers } from 'next/headers';
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { verifyWebhookSignature } from "@hygraph/utils";
  
 export async function POST(request: Request) {
@@ -15,9 +15,7 @@ export async function POST(request: Request) {
   });
 
   if(isValid) {
-    revalidatePath("/noticias");
-    revalidatePath("/contribuir");
-    revalidatePath("/");
+    revalidateTag("hygraph");
     return NextResponse.json({ 
       revalidated: true, 
       now: Date.now() 
