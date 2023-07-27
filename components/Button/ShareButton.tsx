@@ -20,11 +20,6 @@ export function ShareButton({ link, text, theme, content, title, body }: ShareBu
       text: (content ?? body?.markdown ?? "") + "\n",
       title,
       url: link
-    })
-    .then(() => alert("Obrigado por compartilhar!"))
-		.catch((error) => {
-      alert("Ocorreu um erro ao compartilhar!");
-      console.error(error);
     });
   };
 
