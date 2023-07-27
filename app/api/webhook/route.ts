@@ -26,8 +26,6 @@ export async function POST(request: Request) {
     { 
       revalidated: false, 
       now: Date.now() 
-    }, {
-      status: 403
     }
   );
 };
