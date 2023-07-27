@@ -1,6 +1,6 @@
 .container {
   background-color: var(--white);
-  padding: 1.5rem;
+  padding: 2rem 5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -12,7 +12,7 @@
 
   > div[role="button-group"] {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
 
     button, a {
@@ -24,7 +24,7 @@
 .container_in_home {
   > div[role="button-group"] {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
 
     button, a {
@@ -35,10 +35,23 @@
 
 @media (min-width: 1540px) {
   .container_in_home {
-    gap: 1rem;
+    gap: 2rem;
     > div[role="button-group"] {
       button, a {
         font-size: var(--md);
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    padding: 1.5rem 2.5rem;
+    gap: 1rem;
+
+    > div[role="button-group"] {
+      button, a {
+        font-size: var(--xs);
       }
     }
   }
