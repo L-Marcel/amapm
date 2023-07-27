@@ -16,8 +16,20 @@ export async function POST(request: Request) {
 
   if(isValid) {
     revalidatePath("/noticias");
-    return NextResponse.json({ revalidated: true, now: Date.now() });
+    revalidatePath("/contribuir");
+    revalidatePath("/");
+    return NextResponse.json({ 
+      revalidated: true, 
+      now: Date.now() 
+    });
   };
   
-  return NextResponse.json({ revalidated: false, now: Date.now() });
+  return NextResponse.json(
+    { 
+      revalidated: false, 
+      now: Date.now() 
+    }, {
+      status: 403
+    }
+  );
 };
