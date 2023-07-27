@@ -1,22 +1,20 @@
+import { ComponentProps } from "react";
+import { Button } from "../Button";
+import { Markdown } from "../Markdown";
 import style from "./index.module.scss";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import dayjs from "dayjs";
 
-export type PostButton = {
-  id: string;
-  text: string;
-  theme: "blue" | "gray";
-  link: string;
-};
+type ButtonProps = ComponentProps<typeof Button>;
 
 export type PostContent = {
   id: string;
   title: string;
   publishedAt: string;
   author: string;
-  body: string;
-  buttons: PostButton[];
+  body: {
+    markdown: string;
+  };
+  buttons: ButtonProps[];
 };
 
 interface PostProps {
@@ -37,40 +35,17 @@ export function Post({ content }: PostProps) {
       </header>
       <main>
         <Markdown 
-          className={style.markdown}
-          remarkPlugins={[remarkGfm]}
-          components={{
-            "h1": "h4",
-            "h2": "h5",
-            "h3": "h6",
-            table: ({ children, ...rest }) => {
-              return (
-                <div role="box">
-                  <div role="table">
-                    <table {...rest}>
-                      {children}
-                    </table>
-                  </div>
-                </div>
-              );
-            }
-          }}
-        >
-          {body}
-        </Markdown>
+          content={body.markdown}
+        />
       </main>
       <footer>
         {
-          buttons.map(({ id, link, text, theme }) => {
+          buttons.map(({ id, ...rest }) => {
             return (
-              <a 
-                key={id} 
-                href={link} 
-                role={theme}
-                target="_blank"
-              >
-                {text}
-              </a>
+              <Button 
+                key={id}
+                {...rest}
+              />
             );
           })
         }

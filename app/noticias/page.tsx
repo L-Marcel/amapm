@@ -3,8 +3,7 @@ import style from "./index.module.scss";
 import { Query } from "@/services/query";
 
 export default async function News() {
-  const response = await Query.getNews() as any;
-  const news = (response.noticias ?? []) as PostContent[];
+  const news = await Query.getNews();
 
   return (
     <main className={style.container}>

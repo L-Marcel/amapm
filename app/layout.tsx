@@ -39,7 +39,7 @@ export default function RootLayout({
           <Header.Link href="/">Início</Header.Link>
           <Header.Link href="/noticias">Notícias</Header.Link>
           <Header.Link href="/diretoria">Diretoria</Header.Link>
-          <Header.Link href="/formulario">Formulários</Header.Link>
+          <Header.Link href="/contribuir">Contribuir</Header.Link>
         </Header>
         {children}
         <Footer/>

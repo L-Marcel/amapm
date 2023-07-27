@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import style from "./index.module.scss";
+import { Panel, PanelData } from '@/components/Panel';
+import { Query } from '@/services/query';
 
-export default function Home() {
+export default async function Home() {
+  const memberPanel = await Query.getMemberPanel();
+
   return (
     <main className={style.container}>
       <section>
@@ -27,6 +31,7 @@ export default function Home() {
         <p>Temos como base as lições de Jesus Cristo, mas não possuímos vinculoco com nenhuma entidade religiosa. Além disso, nossos voluntários são das mais diversas religiões ou partidos políticos.</p>
         <p>Logo, não possuímos nenhum vínculo político seja ele de esquerda, de direita ou centro. No entanto, caso algum político queira participar como sócio, não será impedido.</p>
       </section>
+      { memberPanel && <Panel {...memberPanel} inHome/> }
     </main>
   )
 }
