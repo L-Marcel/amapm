@@ -1,19 +1,9 @@
 .container {
   section {
+    background-color: var(--dark-blue);
     display: flex;
     flex-direction: column;
-    gap: 0;
-    padding: 0 0 1.5rem 0;
-  }
-}
-
-@media (max-width: 950px) {
-  .container {
-    background-color: var(--dark-blue);
-
-    section {
-      gap: 1px;
-      padding: 0;
-    }
+    gap: 1px;
+    padding: 0;
   }
 }

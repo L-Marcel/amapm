@@ -8,6 +8,11 @@
     font-family: var(--body);
   }
 
+  blockquote {
+    padding: 0.15rem 0.15rem 0.15rem 0.4rem;
+    border-left: 3px solid var(--black);
+  }
+
   a {
     color: var(--blue);
     text-underline-offset: 3px;
@@ -132,6 +137,11 @@
   .container {
     p, li, a, h6, table {
       font-size: var(--md);
+    }
+
+    blockquote {
+      padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+      border-left: 3px solid var(--black);
     }
 
     h4 {

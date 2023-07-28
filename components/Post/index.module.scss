@@ -1,11 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin: 0rem 3rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 2rem 5rem;
   background-color: var(--white);
-  border-radius: 16px;
 
   header {
     display: flex;
@@ -32,145 +30,11 @@
   }
 }
 
-.markdown {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
-  p, li, a {
-    font-size: var(--xs);
-    font-family: var(--body);
-  }
-
-  a {
-    color: var(--blue);
-    text-underline-offset: 3px;
-
-    &:hover {
-      color: var(--dark-blue);
-    }
-  }
-
-  h4 {
-    font-size: var(--md);
-    font-weight: 600;
-    font-family: var(--title);
-    margin-top: 8px;
-  }
-
-  h5 {
-    font-size: var(--sm);
-    font-weight: 600;
-    font-family: var(--title);
-    margin-top: 10px;
-  }
-
-  h6 {
-    font-weight: 600;
-    font-family: var(--title);
-    font-size: var(--xs);
-    margin-top: 10px;
-  }
-
-  ul {
-    li {
-      margin-left: 1.2rem;
-    }
-  }
-
-  input:checked {
-    color: var(--white);
-    background-color: var(--blue);
-  }
-
-  div[role="box"] {
-    display: table;
-    table-layout: fixed;
-    width: fit-content;
-    max-width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-
-    > div[role="table"] {
-      display: table-cell;
-      overflow-x: auto;
-      width: fit-content;
-
-      &::-webkit-scrollbar {
-        height: 8px;
-      }
-  
-      &::-webkit-scrollbar-track {
-        background: var(--dark-blue);
-      }
-  
-      &::-webkit-scrollbar-thumb {
-        background: var(--light-blue);
-      }
-  
-      &::-webkit-scrollbar-thumb:hover {
-        background: var(--blue);
-      }
-    }
-  }
-
-  table {
-    color: var(--black);
-    border: 0;
-    font-size: var(--xs);
-    border-collapse: collapse;
- 
-    thead, tfoot {
-      th {
-        background-color: var(--light-blue);
-      }
-    }
-
-    th, td {
-      padding: 0.5rem;
-      background-color: var(--gray);
-      border: 1px solid var(--black);
-    }
-
-    th {
-      border-top: 0;
-
-      &:first-of-type {
-        border-left: 0;
-      }
-
-      &:last-of-type {
-        border-right: 0;
-      }
-    }
-
-    td {
-      &:first-of-type {
-        border-left: 0;
-      }
-
-      &:last-of-type {
-        border-right: 0;
-      }
-    }
-
-    tr:last-of-type {
-      td {
-        border-bottom: 0;
-      }
-    }
-  }
-}
-
 @media (max-width: 950px) {
   .container {
-    border-radius: 0px;
-    box-shadow: 2px 2px 5px -3px;
-    margin: 0rem;
-    background-color: var(--white);
+    padding: 1.5rem 2.5rem;
   }
 }
-
 
 @media (min-width: 1540px) {
   .container {
@@ -188,20 +52,6 @@
       a {
         font-size: var(--md);
       }
-    }
-  }
-
-  .markdown {
-    p, li, a, h6, table {
-      font-size: var(--md);
-    }
-
-    h4 {
-      font-size: var(--xl);
-    }
-
-    h5 {
-      font-size: var(--lg);
     }
   }
 }

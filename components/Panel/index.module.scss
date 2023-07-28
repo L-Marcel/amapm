@@ -26,21 +26,12 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-
-    button, a {
-      font-size: var(--sm);
-    }
   }
 }
 
 @media (min-width: 1540px) {
   .container_in_home {
     gap: 2rem;
-    > div[role="button-group"] {
-      button, a {
-        font-size: var(--md);
-      }
-    }
   }
 }
 
