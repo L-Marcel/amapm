@@ -24,7 +24,7 @@ async function request(tag: string, query: string) {
 export class Query {
   static async getPanels() {
     const response = await request("PainelDeContribuicao", `query getPanels {
-      paineisDeContribuicao {
+      paineisDeContribuicao(orderBy: createdAt_DESC) {
         id
         panel_button {
           id
@@ -90,7 +90,7 @@ export class Query {
 
   static async getNews() {
     const response = await request("Noticia", `query getNews {
-      noticias {
+      noticias(orderBy: createdAt_DESC) {
         id
         author
         title

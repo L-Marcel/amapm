@@ -9,11 +9,7 @@ export default async function News() {
     <main className={style.container}>
       <section>
         {
-          news
-          .sort((a, b) => {
-            return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-          })
-          .map((post) => {
+          news.map((post) => {
             return (
               <Post
                 key={post.id}
