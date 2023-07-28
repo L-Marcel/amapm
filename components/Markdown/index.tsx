@@ -18,6 +18,13 @@ export function Markdown({
         "h1": "h4",
         "h2": "h5",
         "h3": "h6",
+        a: ({ children, ...rest }) => {
+          return (
+            <a {...rest} target="_blank">
+              {children}
+            </a>
+          );
+        }, 
         table: ({ children, ...rest }) => {
           return (
             <div role="box">
