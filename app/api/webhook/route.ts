@@ -14,9 +14,11 @@ export async function POST(request: Request) {
   });
 
   if(isValid) {
+    const tag = body.data["operation"];
     revalidateTag("hygraph");
     return NextResponse.json({ 
-      revalidated: true, 
+      revalidated: true,
+      tag,
       now: Date.now() 
     });
   };
