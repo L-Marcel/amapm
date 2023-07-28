@@ -23,7 +23,6 @@ async function request(query: string) {
 
 export class Query {
   static async getPanels() {
-    console.log("Requestiing panels...");
     const response = await request(`query getPanels {
       paineisDeContribuicao {
         id
@@ -57,7 +56,6 @@ export class Query {
   };
 
   static async getMemberPanel() {
-    console.log("Requestiing member panel...");
     const response = await request(`query getMemberPanel {
       sejaMembros {
         title
@@ -87,12 +85,10 @@ export class Query {
       }
     }`);
 
-    console.log(response.sejaMembros[0]);
     return (response.sejaMembros[0] ?? undefined) as PanelData | undefined;
   };
 
   static async getNews() {
-    console.log("Requestiing news...");
     const response = await request(`query getNews {
       noticias {
         id
