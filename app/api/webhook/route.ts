@@ -14,11 +14,12 @@ export async function POST(request: Request) {
   });
 
   if(isValid) {
-    //const tag = body;
-    console.log(body);
-    revalidateTag("hygraph");
+    const tag = body.data["__typename"];
+
+    revalidateTag(tag);
     return NextResponse.json({ 
-      revalidated: true
+      revalidated: true,
+      tag
     });
   };
   

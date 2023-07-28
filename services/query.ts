@@ -1,7 +1,7 @@
 import { PanelData } from "@/components/Panel";
 import { PostContent } from "@/components/Post";
 
-async function request(query: string) {
+async function request(tag: string, query: string) {
 	const response = await fetch(process.env.ENDPOINT as string, {
 		method: "POST",
 		headers: {
@@ -10,9 +10,9 @@ async function request(query: string) {
       Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
 		},
 		body: JSON.stringify({ query }),
-    next: { 
+    next: {
       revalidate: 0,
-      tags: ["hygraph"] 
+      tags: [tag] 
     } 
 	});
 
@@ -23,7 +23,7 @@ async function request(query: string) {
 
 export class Query {
   static async getPanels() {
-    const response = await request(`query getPanels {
+    const response = await request("PainelDeContribuicao", `query getPanels {
       paineisDeContribuicao {
         id
         panel_button {
@@ -56,7 +56,7 @@ export class Query {
   };
 
   static async getMemberPanel() {
-    const response = await request(`query getMemberPanel {
+    const response = await request("SejaMembro", `query getMemberPanel {
       sejaMembros {
         title
         share_button {
@@ -89,7 +89,7 @@ export class Query {
   };
 
   static async getNews() {
-    const response = await request(`query getNews {
+    const response = await request("Noticia", `query getNews {
       noticias {
         id
         author
