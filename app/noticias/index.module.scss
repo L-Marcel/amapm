@@ -1,9 +1,42 @@
 .container {
   section {
-    background-color: var(--dark-blue);
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    padding: 0;
+    &:first-of-type {
+      display: flex;
+      flex-direction: column;
+      padding: 0.25rem 5rem 0rem 5rem;
+
+      input {
+        font-size: var(--xs);
+        font-family: var(--body);
+        max-width: 40vw;
+        outline: none;
+        padding: 0.75rem 1rem;
+        background-color: var(--gray);
+        border-radius: 8px;
+        color: var(--black);
+      }
+    }
+    
+    &:last-of-type {
+      background-color: var(--dark-blue);
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    section {
+      &:first-of-type {
+        padding: 1.8rem 2.5rem 0rem 2.5rem;
+        
+        input {
+          max-width: initial;
+        }
+      }
+    }
   }
 }

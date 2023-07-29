@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import style from "./index.module.scss";
-import { Panel, PanelData } from '@/components/Panel';
+import { Panel } from '@/components/Panel';
 import { Query } from '@/services/query';
 
 export default async function Home() {

@@ -1,5 +1,5 @@
 import { PanelData } from "@/components/Panel";
-import { PostContent } from "@/components/Post";
+import { PostContent } from "@/components/News";
 
 async function request(tag: string, query: string) {
 	const response = await fetch(process.env.ENDPOINT as string, {
@@ -24,7 +24,7 @@ async function request(tag: string, query: string) {
 export class Query {
   static async getPanels() {
     const response = await request("PainelDeContribuicao", `query getPanels {
-      paineisDeContribuicao(orderBy: createdAt_DESC) {
+      paineisDeContribuicao(orderBy: createdAt_DESC, first: 11) {
         id
         panel_button {
           id
@@ -90,7 +90,7 @@ export class Query {
 
   static async getNews() {
     const response = await request("Noticia", `query getNews {
-      noticias(orderBy: createdAt_DESC) {
+      noticias(orderBy: createdAt_DESC, first: 30) {
         id
         author
         title

@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 
 type ButtonProps = ComponentProps<typeof Button>;
 
-export type PostContent = {
+export type NewsContent = {
   id: string;
   title: string;
   publishedAt: string;
@@ -17,11 +17,11 @@ export type PostContent = {
   buttons: ButtonProps[];
 };
 
-interface PostProps {
-  content: PostContent;
+interface NewsProps {
+  content: NewsContent;
 };
 
-export function Post({ content }: PostProps) {
+export function News({ content }: NewsProps) {
   const { author, id, body, buttons, publishedAt, title } = content;
   const formattedPublishedAt = dayjs(publishedAt).format("DD/MM/YYYY");
 

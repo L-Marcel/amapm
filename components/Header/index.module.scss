@@ -45,6 +45,13 @@
             display: flex;
             color: #FFF;
             text-decoration: none;
+            
+            &:focus-visible {
+              outline: none;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+              filter: brightness(0.93);
+            }
   
             &[role="actived"] {
               background-color: var(--light-blue);
