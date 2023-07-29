@@ -1,5 +1,5 @@
 import { PanelData } from "@/components/Panel";
-import { PostContent } from "@/components/News";
+import { NewsContent } from "@/components/News";
 
 async function request(tag: string, query: string) {
 	const response = await fetch(process.env.ENDPOINT as string, {
@@ -118,6 +118,6 @@ export class Query {
       }           
     }`);
 
-    return (response.noticias ?? []) as PostContent[];
+    return (response.noticias ?? []) as NewsContent[];
   };
 };
