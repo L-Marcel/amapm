@@ -15,7 +15,7 @@ export interface ShareButtonProps {
 export function ShareButton({ link, text, theme, content, title, body }: ShareButtonProps) {
   function onClick() {
     navigator.share({
-      text: `*${title}\n\n*` + (content ?? body ?? "") + "\n\n",
+      text: `*${title}*\n\n` + (content ?? body ?? "") + "\n\n",
       title,
       url: link
     });
