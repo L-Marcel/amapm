@@ -1,8 +1,10 @@
 import style from "./index.module.scss";
 import { Query } from "@/services/query";
 import { NewsProvider } from "@/context/NewsProvider";
-import { NewsList } from "@/components/NewsList";
-import { SearchInput } from "@/components/SearchInput";
+
+import { SearchInput } from "@/components/News/SearchInput";
+import { NewsList } from "@/components/News/List";
+import { NewsPagination } from "@/components/News/Pagination";
 
 export default async function News() {
   const news = await Query.getNews();
@@ -15,6 +17,7 @@ export default async function News() {
         </section>
         <section>
           <NewsList/>
+          <NewsPagination/>
         </section>
       </NewsProvider>
     </main>

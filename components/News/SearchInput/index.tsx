@@ -1,5 +1,6 @@
 'use client';
 
+import style from "./index.module.scss";
 import { appContext } from "@/context/NewsProvider";
 import { ChangeEvent, useContext } from "react";
 
@@ -24,6 +25,7 @@ export function SearchInput() {
 
   return (
     <input 
+      className={style.container}
       type="text" 
       onChange={onChangeInput}
       placeholder="Pequise por título, author(a) ou data"

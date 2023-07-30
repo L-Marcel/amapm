@@ -1,7 +1,13 @@
 import { PanelData } from "@/components/Panel";
 import { NewsContent } from "@/components/News";
 
+const isDev = process.env.NODE_ENV === "development";
+
 async function request(tag: string, query: string) {
+  if(isDev) {
+    console.info("- 🤖 caching is enabled in development mode to preserve the API request limiter!");
+  };
+
 	const response = await fetch(process.env.ENDPOINT as string, {
 		method: "POST",
 		headers: {
@@ -10,8 +16,8 @@ async function request(tag: string, query: string) {
       Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
 		},
 		body: JSON.stringify({ query }),
+    cache: isDev? "default":"no-store",
     next: {
-      revalidate: 0,
       tags: [tag] 
     } 
 	});

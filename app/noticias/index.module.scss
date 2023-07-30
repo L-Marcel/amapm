@@ -4,17 +4,6 @@
       display: flex;
       flex-direction: column;
       padding: 0.25rem 5rem 0rem 5rem;
-
-      input {
-        font-size: var(--xs);
-        font-family: var(--body);
-        max-width: 40vw;
-        outline: none;
-        padding: 0.75rem 1rem;
-        background-color: var(--gray);
-        border-radius: 8px;
-        color: var(--black);
-      }
     }
     
     &:last-of-type {
@@ -32,10 +21,6 @@
     section {
       &:first-of-type {
         padding: 1.8rem 2.5rem 0rem 2.5rem;
-        
-        input {
-          max-width: initial;
-        }
       }
     }
   }

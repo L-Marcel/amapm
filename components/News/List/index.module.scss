@@ -1,0 +1,27 @@
+.not_found {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 5rem;
+
+  h3 {
+    font-family: var(--title);
+    color: var(--black);
+    font-weight: 700;
+    font-size: var(--sm);
+  }
+
+  p {
+    font-family: var(--body);
+    color: var(--black);
+    font-size: var(--xs);
+  }
+}
+
+
+@media (max-width: 950px) {
+  .not_found {
+    padding: 2rem 2.5rem;
+  }
+}

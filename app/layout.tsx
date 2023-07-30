@@ -1,7 +1,5 @@
 import './globals.css'
-import '../styles/old_css.css'
 import type { Metadata } from 'next'
-import Link from 'next/link';
 import { Montserrat, Roboto } from 'next/font/google'
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';

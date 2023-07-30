@@ -1,0 +1,16 @@
+.container {
+  font-size: var(--xs);
+  font-family: var(--body);
+  max-width: 40vw;
+  outline: none;
+  padding: 0.75rem 1rem;
+  background-color: var(--gray);
+  border-radius: 8px;
+  color: var(--black);
+}
+
+@media (max-width: 950px) {
+  .container {
+    max-width: initial;
+  }
+}
