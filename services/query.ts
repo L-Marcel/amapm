@@ -46,9 +46,7 @@ export class Query {
           theme
           title
           type
-          body {
-            markdown
-          }
+          body
         }
         createdAt
         description {
@@ -72,9 +70,7 @@ export class Query {
           theme
           title
           type
-          body {
-            markdown
-          }
+          body
         }
         panel_button {
           theme

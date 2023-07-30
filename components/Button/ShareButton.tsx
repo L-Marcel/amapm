@@ -9,15 +9,13 @@ export interface ShareButtonProps {
   theme: "blue" | "gray";
   title: string;
   content?: string;
-  body?: {
-    markdown: string;
-  }
+  body: string;
 }
 
 export function ShareButton({ link, text, theme, content, title, body }: ShareButtonProps) {
   function onClick() {
     navigator.share({
-      text: (content ?? body?.markdown ?? "") + "\n",
+      text: `*${title}\n\n*` + (content ?? body ?? "") + "\n\n",
       title,
       url: link
     });
