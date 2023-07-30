@@ -14,7 +14,7 @@ export type NewsReducerState = {
 export enum NewsReducerActions {
   SEARCH,
   NAVIGATE
-};
+}
 
 type SearchAction = {
   type: NewsReducerActions.SEARCH;
@@ -39,17 +39,17 @@ export class NewsReducer {
         formattedPublishedAt.toLowerCase().includes(query.toLowerCase())
       ) {
         return true;
-      };
+      }
 
       return false;
     });
-  };
+  }
 
   private static getNewsInPage(data: NewsContent[], page: number, maxPage: number) {
     if(page < 1 || page > maxPage) {
       page = Math.min(page, maxPage);
       page = Math.max(page, 1);
-    };
+    }
 
     const start = (page - 1) * 10;
     const end = start + 10;
@@ -58,62 +58,62 @@ export class NewsReducer {
       data: data.slice(start, end),
       page
     };
-  };
+  }
 
   static reducer(state: NewsReducerState, action: Actions): NewsReducerState {
     let data: NewsContent[] = [...state.initialData];
 
     switch(action.type) {
-      case NewsReducerActions.SEARCH:
-        data = NewsReducer.filterByQuery(data, action.query);
+    case NewsReducerActions.SEARCH:
+      data = NewsReducer.filterByQuery(data, action.query);
 
-        const newMaxPageOnSearch = Math.ceil(data.length / 10);
-        data = NewsReducer.getNewsInPage(data, 1, newMaxPageOnSearch).data;
+      const newMaxPageOnSearch = Math.ceil(data.length / 10);
+      data = NewsReducer.getNewsInPage(data, 1, newMaxPageOnSearch).data;
 
-        return {
-          ...state,
-          page: {
-            current: 1,
-            max: newMaxPageOnSearch
-          },
-          query: action.query,
-          data
-        };
-      case NewsReducerActions.NAVIGATE:
-        data = NewsReducer.filterByQuery(data, state.query);
+      return {
+        ...state,
+        page: {
+          current: 1,
+          max: newMaxPageOnSearch
+        },
+        query: action.query,
+        data
+      };
+    case NewsReducerActions.NAVIGATE:
+      data = NewsReducer.filterByQuery(data, state.query);
         
-        const newMaxPageOnNavigate = Math.ceil(data.length / 10);
-        const pageIntervalData = NewsReducer.getNewsInPage(data, action.page, newMaxPageOnNavigate);
-        data = pageIntervalData.data;
+      const newMaxPageOnNavigate = Math.ceil(data.length / 10);
+      const pageIntervalData = NewsReducer.getNewsInPage(data, action.page, newMaxPageOnNavigate);
+      data = pageIntervalData.data;
 
-        return {
-          ...state,
-          page: {
-            current: pageIntervalData.page,
-            max: state.page.max
-          },
-          data
-        };
-      default:
-        break;
-    };
+      return {
+        ...state,
+        page: {
+          current: pageIntervalData.page,
+          max: state.page.max
+        },
+        data
+      };
+    default:
+      break;
+    }
 
     return {
       ...state
     };
-  };
+  }
 
   static search(query: string): SearchAction {
     return {
       type: NewsReducerActions.SEARCH,
       query
     };
-  };
+  }
 
   static navigate(page: number): NavigateAction {
     return {
       type: NewsReducerActions.NAVIGATE,
       page
     };
-  };
-};
+  }
+}

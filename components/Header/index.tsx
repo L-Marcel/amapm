@@ -1,6 +1,6 @@
 import style from "./index.module.scss";
 import Image from "next/image";
-import { HeaderLink } from './HeaderLink';
+import { HeaderLink } from "./HeaderLink";
 import { ReactNode } from "react";
 
 interface HeaderRootProps {
@@ -42,7 +42,7 @@ function HeaderRoot({ children }: HeaderRootProps) {
       </div>
     </header>
   );
-};
+}
 
 export const Header = Object.assign(HeaderRoot, {
   Link: HeaderLink

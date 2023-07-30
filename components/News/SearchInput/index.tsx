@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import style from "./index.module.scss";
 import { appContext } from "@/context/NewsProvider";
@@ -12,7 +12,7 @@ export function SearchInput() {
     return () => {
       search(e.target.value);
     };
-  };
+  }
   
   function onChangeInput(e: ChangeEvent<HTMLInputElement>) {
     if(timer) {
@@ -20,8 +20,8 @@ export function SearchInput() {
       timer = setTimeout(filterNews(e), 1000);
     } else {
       timer = setTimeout(filterNews(e), 1000);
-    };
-  };
+    }
+  }
 
   return (
     <input 
@@ -31,4 +31,4 @@ export function SearchInput() {
       placeholder="Pequise por título, author(a) ou data"
     />
   );
-};
+}

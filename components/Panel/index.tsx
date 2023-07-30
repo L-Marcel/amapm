@@ -29,7 +29,7 @@ export function Panel({
     <section className={inHome? style.container_in_home:style.container}>
       <h2>{title}</h2>
       <Markdown 
-        content={description?.markdown ?? ''}
+        content={description?.markdown ?? ""}
       />
       <div role="button-group">
         <Button {...panel_button}/>
@@ -38,4 +38,4 @@ export function Panel({
       {children}
     </section>
   );
-};
+}

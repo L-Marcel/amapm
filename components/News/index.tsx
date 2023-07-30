@@ -19,7 +19,7 @@ export type NewsContent = {
 
 interface NewsProps {
   content: NewsContent;
-};
+}
 
 export function News({ content }: NewsProps) {
   const { author, id, body, buttons, publishedAt, title } = content;
@@ -52,4 +52,4 @@ export function News({ content }: NewsProps) {
       </footer>
     </article>
   );
-};
+}

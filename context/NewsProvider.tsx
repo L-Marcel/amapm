@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { NewsContent } from "@/components/News";
 import { ReactNode, createContext, useCallback, useReducer } from "react";
@@ -54,4 +54,4 @@ export function NewsProvider({ children, news }: NewsProviderProps) {
       {children}
     </appContext.Provider>
   );
-};
+}

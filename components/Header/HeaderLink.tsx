@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ComponentProps } from "react";
 import { usePathname } from "next/navigation";
 
-interface HeaderLinkProps extends ComponentProps<typeof Link> {};
+interface HeaderLinkProps extends ComponentProps<typeof Link> {}
 
 export function HeaderLink({
   children,
@@ -22,4 +22,4 @@ export function HeaderLink({
       </Link>
     </li>
   );
-};
+}

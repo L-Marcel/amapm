@@ -7,7 +7,7 @@ export interface ButtonProps {
   link: string;
   text: "blue" | "gray";
   theme: string;
-};
+}
 
 export function Button(props: ButtonProps | ShareButtonProps) {
   if(props.type === "default") {
@@ -22,7 +22,7 @@ export function Button(props: ButtonProps | ShareButtonProps) {
         {text}
       </a>
     );
-  }; 
+  } 
 
   return (
     <ShareButton {...props}/>

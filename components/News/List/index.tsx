@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { appContext } from "@/context/NewsProvider";
 import { useContext } from "react";
@@ -25,4 +25,4 @@ export function NewsList() {
       }
     </>
   );
-};
+}

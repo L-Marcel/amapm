@@ -106,4 +106,4 @@ export default function Board() {
       </section>
     </main>
   );
-};
+}

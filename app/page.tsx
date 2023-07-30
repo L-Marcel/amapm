@@ -1,7 +1,7 @@
-import Image from 'next/image'
+import Image from "next/image";
 import style from "./index.module.scss";
-import { Panel } from '@/components/Panel';
-import { Query } from '@/services/query';
+import { Panel } from "@/components/Panel";
+import { Query } from "@/services/query";
 
 export default async function Home() {
   const memberPanel = await Query.getMemberPanel();
@@ -33,5 +33,5 @@ export default async function Home() {
       </section>
       { memberPanel && <Panel {...memberPanel} inHome/> }
     </main>
-  )
+  );
 }

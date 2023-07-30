@@ -1,4 +1,4 @@
-import style from './index.module.scss';
+import style from "./index.module.scss";
 
 export function Footer() {
   return (
@@ -10,4 +10,4 @@ export function Footer() {
       <p><a href="https://www.instagram.com/amapraiadomeio/" target="_blank">Instagram</a> | <a href="https://m.facebook.com/AmaPmFocodeLuz/" target="_blank">Facebook</a></p>
     </footer>
   );
-};
+}

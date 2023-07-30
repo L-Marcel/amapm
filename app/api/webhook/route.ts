@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server';
-import { revalidateTag } from 'next/cache';
+import { NextResponse } from "next/server";
+import { revalidateTag } from "next/cache";
 import { verifyWebhookSignature } from "@hygraph/utils";
  
 export async function POST(request: Request) {
   const body = await request.json();
-  const signature = request.headers.get('gcms-signature') ?? "";
+  const signature = request.headers.get("gcms-signature") ?? "";
   const secret = process.env.WEBHOOK_SECRET ?? "";
 
   const isValid = verifyWebhookSignature({
@@ -21,11 +21,11 @@ export async function POST(request: Request) {
       revalidated: true,
       tag
     });
-  };
+  }
   
   return NextResponse.json(
     { 
       revalidated: false
     }
   );
-};
+}

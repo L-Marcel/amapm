@@ -6,26 +6,26 @@ const isDev = process.env.NODE_ENV === "development";
 async function request(tag: string, query: string) {
   if(isDev) {
     console.info("- 🤖 caching is enabled in development mode to preserve the API request limiter!");
-  };
+  }
 
-	const response = await fetch(process.env.ENDPOINT as string, {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			Accept: "application/json",
+  const response = await fetch(process.env.ENDPOINT as string, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
       Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
-		},
-		body: JSON.stringify({ query }),
+    },
+    body: JSON.stringify({ query }),
     cache: isDev? "default":"no-store",
     next: {
       tags: [tag] 
     } 
-	});
+  });
 
   const json = await response.json();
 
-	return json.data;
-};
+  return json.data;
+}
 
 export class Query {
   static async getPanels() {
@@ -59,7 +59,7 @@ export class Query {
     }`);
 
     return (response.paineisDeContribuicao ?? []) as PanelData[];
-  };
+  }
 
   static async getMemberPanel() {
     const response = await request("SejaMembro", `query getMemberPanel {
@@ -92,7 +92,7 @@ export class Query {
     }`);
 
     return (response.sejaMembros[0] ?? undefined) as PanelData | undefined;
-  };
+  }
 
   static async getNews() {
     const response = await request("Noticia", `query getNews {
@@ -125,5 +125,5 @@ export class Query {
     }`);
 
     return (response.noticias ?? []) as NewsContent[];
-  };
-};
+  }
+}

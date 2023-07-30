@@ -14,7 +14,7 @@ function fixAsterisk(content: string) {
       cur = " " + cur;
     } else {
       needSpace = false;
-    };
+    }
 
     isFirst = false;
 
@@ -22,18 +22,18 @@ function fixAsterisk(content: string) {
       needSpace = true;
     } else if(cur.match(breakLine)) {
       isFirst = true;
-    };
+    }
     
     prev.push(cur);
     return prev;
   }, [] as string[]).join("**");
 
   return content;
-};
+}
 
 export function formatMarkdown(content: string) {
-  const checkedRegex = /\-   \\\[x\]/g;
-  const uncheckedRegex = /\-   \\\[ \]/g;
+  const checkedRegex = /\- {3}\\\[x\]/g;
+  const uncheckedRegex = /\- {3}\\\[ \]/g;
 
   content = content.replace(checkedRegex, "- [x]");
   content = content.replace(uncheckedRegex, "- [ ]");
@@ -41,4 +41,4 @@ export function formatMarkdown(content: string) {
   content = fixAsterisk(content);
 
   return content;
-};
+}

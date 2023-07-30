@@ -41,4 +41,4 @@ export function Markdown({
       {formatMarkdown(content)}
     </MarkdownContainer>
   );
-};
+}

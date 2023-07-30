@@ -12,7 +12,7 @@ export interface ShareButtonProps {
   body?: {
     markdown: string;
   }
-};
+}
 
 export function ShareButton({ link, text, theme, content, title, body }: ShareButtonProps) {
   function onClick() {
@@ -21,7 +21,7 @@ export function ShareButton({ link, text, theme, content, title, body }: ShareBu
       title,
       url: link
     });
-  };
+  }
 
   return (
     <button
@@ -32,4 +32,4 @@ export function ShareButton({ link, text, theme, content, title, body }: ShareBu
       {text}
     </button>
   );
-};
+}

@@ -31,4 +31,4 @@ export function MemberAvatar({
       <p>{name.toUpperCase().slice(0,2)}</p>
     </div>
   );
-};
+}

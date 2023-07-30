@@ -1,25 +1,25 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Montserrat, Roboto } from 'next/font/google'
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Montserrat, Roboto } from "next/font/google";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const montserrat = Montserrat({ 
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--title"
 });
 
 const roboto = Roboto({ 
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   variable: "--body"
 });
 
 export const metadata: Metadata = {
-  title: 'AMAPM - Associação Cristã de Moradores e Amigos da Praia do Meio',
-  description: 'Somos uma associação sem fins lucrativos composta por voluntários das mais diversas áreas. Temos por objetivo praticar as lições evangélicas de Jesus Cristo sem quaisquer distinção religiosa, política ou social.',
-}
+  title: "AMAPM - Associação Cristã de Moradores e Amigos da Praia do Meio",
+  description: "Somos uma associação sem fins lucrativos composta por voluntários das mais diversas áreas. Temos por objetivo praticar as lições evangélicas de Jesus Cristo sem quaisquer distinção religiosa, política ou social.",
+};
 
 export default function RootLayout({
   children,
@@ -43,5 +43,5 @@ export default function RootLayout({
         <Footer/>
       </body>
     </html>
-  )
+  );
 }
