@@ -6,6 +6,7 @@
   gap: 1rem;
 
   > h2:first-of-type {
+    font-family: var(--title);
     color: var(--dark-blue);
     font-size: var(--md);
   }

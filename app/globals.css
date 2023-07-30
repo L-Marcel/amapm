@@ -35,6 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  font-family: var(--body);
 }
 
 main {
