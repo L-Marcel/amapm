@@ -1,12 +1,27 @@
 .container {
-  font-size: var(--xs);
-  font-family: var(--body);
+  display: flex;
+  position: relative;
+  width: 100%;
   max-width: 40vw;
-  outline: none;
-  padding: 0.75rem 1rem;
-  background-color: var(--gray);
-  border-radius: 8px;
-  color: var(--black);
+
+  svg {
+    position: absolute;
+    z-index: 2;
+    left: 1rem;
+    top: 0.8rem;
+  }
+
+  input {
+    z-index: 1;
+    font-size: var(--xs);
+    font-family: var(--body);
+    width: inherit;
+    outline: none;
+    padding: 0.75rem 1rem 0.75rem calc(2rem + 8px);
+    background-color: var(--gray);
+    border-radius: 8px;
+    color: var(--black);
+  }
 }
 
 @media (max-width: 950px) {

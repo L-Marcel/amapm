@@ -3,6 +3,7 @@
 import style from "./index.module.scss";
 import { appContext } from "@/context/NewsProvider";
 import { ChangeEvent, useContext } from "react";
+import { MagnifyingGlass } from "@phosphor-icons/react";
 
 let timer: NodeJS.Timeout | null = null;
 export function SearchInput() {
@@ -24,11 +25,13 @@ export function SearchInput() {
   }
 
   return (
-    <input 
-      className={style.container}
-      type="text" 
-      onChange={onChangeInput}
-      placeholder="Pequise por título, author(a) ou data"
-    />
+    <div className={style.container}>
+      <MagnifyingGlass size={16}/>
+      <input
+        type="text" 
+        onChange={onChangeInput}
+        placeholder="Pequise por título, author(a) ou data"
+      />
+    </div>
   );
 }
