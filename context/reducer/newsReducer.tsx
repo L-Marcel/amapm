@@ -31,12 +31,12 @@ type Actions = SearchAction | NavigateAction;
 export class NewsReducer {
   private static filterByQuery(data: NewsContent[], query: string) {
     return data.filter((news) => {
-      const formattedPublishedAt = dayjs(news.publishedAt).format("DD/MM/YYYY");
+      const formattedCreatedAt = dayjs(news.createdAt).format("DD/MM/YYYY");
       
       if(
         news.title.toLowerCase().includes(query.toLowerCase()) || 
         news.author.toLowerCase().includes(query.toLowerCase()) || 
-        formattedPublishedAt.toLowerCase().includes(query.toLowerCase())
+        formattedCreatedAt.toLowerCase().includes(query.toLowerCase())
       ) {
         return true;
       }

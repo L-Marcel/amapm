@@ -9,7 +9,7 @@ type ButtonProps = ComponentProps<typeof Button>;
 export type NewsContent = {
   id: string;
   title: string;
-  publishedAt: string;
+  createdAt: string;
   author: string;
   body: {
     markdown: string;
@@ -22,8 +22,8 @@ interface NewsProps {
 }
 
 export function News({ content }: NewsProps) {
-  const { author, id, body, buttons, publishedAt, title } = content;
-  const formattedPublishedAt = dayjs(publishedAt).format("DD/MM/YYYY");
+  const { author, id, body, buttons, createdAt, title } = content;
+  const formattedCreatedAt = dayjs(createdAt).format("DD/MM/YYYY");
 
   return (
     <article id={id} className={style.container}>
@@ -31,7 +31,7 @@ export function News({ content }: NewsProps) {
         <h3>
           {title}
         </h3>
-        <p>{formattedPublishedAt} — Por {author}</p>
+        <p>{formattedCreatedAt} — Por {author}</p>
       </header>
       <main>
         <Markdown 

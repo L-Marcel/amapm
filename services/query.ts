@@ -103,7 +103,7 @@ export class Query {
         body {
           markdown
         }
-        publishedAt
+        createdAt
         buttons {
           ... on Button {
             id

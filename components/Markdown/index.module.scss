@@ -108,6 +108,7 @@
     }
 
     th {
+      font-family: var(--title);
       border-top: 0;
 
       &:first-of-type {
@@ -120,6 +121,8 @@
     }
 
     td {
+      font-family: var(--body);
+      
       &:first-of-type {
         border-left: 0;
       }
