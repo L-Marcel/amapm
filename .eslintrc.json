@@ -14,7 +14,7 @@
     "indent": ["error", 2],
     "react/react-in-jsx-scope": "off",
     "no-undef": "off",
-    "no-unused-vars": ["warn"],
+    "no-unused-vars": "off",
     "no-case-declarations": "off",
     "no-useless-escape": "off"
   }
