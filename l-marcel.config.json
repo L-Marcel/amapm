@@ -1,0 +1,10 @@
+{
+  "translatedDescription": "Este site visa colaborar com a divulgação dos trabalhos voluntários da Associação Cristã de Moradores e Amigos da Praia do Meio.",
+  "technologies": [
+    "next.js",
+    "react.js",
+    "typescript",
+    "sass",
+    "hygraph"
+  ]  
+}
