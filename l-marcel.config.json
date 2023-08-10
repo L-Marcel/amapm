@@ -6,5 +6,8 @@
     "typescript",
     "sass",
     "hygraph"
-  ]  
+  ],
+  "links": {
+    "self": "https://amapm.vercel.app"
+  }
 }
