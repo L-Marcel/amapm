@@ -31,7 +31,7 @@ const boardMembers: BoardMember[] = [
   },
   {
     id: id(),
-    image: `/assets/membro-${id(true)}.png`,
+    image: `/assets/membro-${id(true)}.jpeg`,
     name: "Beatriz",
     office: "2º Secretária "
   },
@@ -61,8 +61,8 @@ const boardMembers: BoardMember[] = [
   },
   {
     id: id(),
-    image: `/assets/membro-${id(true)}.png`,
-    name: "Jissier",
+    image: `/assets/membro-${id(true)}.jpeg`,
+    name: "Jussier",
     office: "3º Conselheiro do Cons. Fiscal"
   },
   {
@@ -73,7 +73,7 @@ const boardMembers: BoardMember[] = [
   },
   {
     id: id(),
-    image: `/assets/membro-${id(true)}.png`,
+    image: `/assets/membro-${id(true)}.jpeg`,
     name: "Régia",
     office: "Suplente do Cons. Fiscal"
   },

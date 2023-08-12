@@ -23,7 +23,7 @@ export default async function Home() {
         </div>
       </section>
       <section>
-        <h2>Quem somos nós?</h2>
+        <h2>Quem nós somos?</h2>
         <p>Somos uma associação sem fins lucrativos composta por voluntários das mais diversas áreas. Temos por objetivo praticar as lições evangélicas de Jesus Cristo sem quaisquer distinção religiosa, política ou social.</p>
       </section>
       <section>

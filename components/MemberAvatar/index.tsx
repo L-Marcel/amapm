@@ -21,8 +21,8 @@ export function MemberAvatar({
         show && <Image
           src={image}
           alt={`Avatar de ${name} | ${office}`}
-          width={100}
-          height={100}
+          width={101}
+          height={101}
           onError={() => {
             setShow(false);
           }}
